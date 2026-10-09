@@ -2,40 +2,34 @@
 
 **Verilog RTL | ALU Design | EDA Automation | Sky130 HD**
 
-An automated framework for functional verification, logic synthesis,
-timing analysis, power estimation, and baseline-versus-optimized
-comparison of a Verilog Arithmetic Logic Unit (ALU).
+An automated framework for functional verification, logic synthesis, timing analysis, power estimation, and baseline-versus-optimized comparison of a Verilog Arithmetic Logic Unit (ALU).
 
 ## Problem Statement
 
-Manual RTL verification and PPA analysis can be repetitive and
-difficult to reproduce.
-
-This project automates key design-analysis stages using scripts,
-a Makefile, and a Docker-based environment.
+Manual RTL verification and PPA analysis can be repetitive and difficult to reproduce. This project automates essential digital-design analysis stages using scripts, a Makefile, and a Docker-based environment.
 
 ## Design Flow
 
 ```text
 Verilog RTL + Testbench
-          |
-          v
-      RTL Linting
-          |
-          v
+         |
+         v
+     RTL Linting
+         |
+         v
  Functional Simulation
-          |
-          v
-    Logic Synthesis
-          |
-          v
- Timing & Power Analysis
-          |
-          v
- Baseline vs Optimized
-          |
-          v
-   Reports and Results
+         |
+         v
+   Logic Synthesis
+         |
+         v
+Timing & Power Analysis
+         |
+         v
+Baseline vs Optimized
+         |
+         v
+  Reports and Results
 ```
 
 ## Key Features
@@ -44,9 +38,24 @@ Verilog RTL + Testbench
 - ALU synthesis using Sky130 HD standard-cell libraries
 - Static timing analysis
 - Estimated power analysis
-- Baseline and optimized implementation comparison
+- Baseline-versus-optimized implementation comparison
 - Automated scripts and Makefile workflow
 - Simulation waveform generation
+- Synthesis schematic visualization
+
+## Design Visualizations
+
+### Optimized ALU Synthesis Schematic
+
+![Optimized ALU synthesis schematic](docs/images/optimized-alu-schematic.svg)
+
+The schematic illustrates the optimized ALU synthesis result.
+
+### ALU Functional Simulation Waveform
+
+![ALU functional simulation waveform](docs/images/alu-waveform.png)
+
+The waveform provides visual evidence of ALU input signals, operation selection, output behavior, and associated simulation signals.
 
 ## Results at a Glance
 
@@ -59,13 +68,11 @@ Verilog RTL + Testbench
 | Estimated power | 0.102 mW | 0.100 mW | 1.96% lower |
 | Functional tests passed | 8/8 | 8/8 | Both passed |
 
-**Verification:** Both reported simulations pass all eight test cases,
-with zero failed tests. The reported lint summary has zero warnings
-and zero errors.
+**Verification:** The comparison report records eight passed functional tests for each implementation and zero failed tests.
 
-**Analysis conditions:** Timing is pre-layout with an ideal clock.
-Power is estimated using the configured default activity; it is not
-a measured silicon power value.
+**Timing:** The reported critical path decreases from 10.11 ns to 7.06 ns. Timing is pre-layout and depends on the applied constraints.
+
+**Power:** Power is estimated using the configured default activity; it is not a measurement of fabricated silicon.
 
 See `reports/ppa/comparison_report.txt` for the comparison summary.
 
@@ -77,7 +84,8 @@ See `reports/ppa/comparison_report.txt` for the comparison summary.
 - Yosys
 - OpenSTA
 - Sky130 HD standard-cell library
-- Docker, Bash, and Makefile
+- Docker
+- Linux, Bash, and Makefile
 
 ## Project Structure
 
@@ -88,6 +96,8 @@ docker-vlsi-framework/
 ├── scripts/         # Automation scripts
 ├── constraints/     # Timing constraints
 ├── lib/             # Library-related files
+├── docs/
+│   └── images/      # Project visualizations
 ├── reports/         # Analysis reports
 ├── results/
 │   ├── baseline/    # Baseline implementation outputs
@@ -99,6 +109,8 @@ docker-vlsi-framework/
 ```
 
 ## Run the Workflow
+
+Run the following commands from the project directory in the configured environment:
 
 ```bash
 make all
@@ -118,9 +130,7 @@ Inspect the `reports/` and `results/` directories for generated outputs.
 
 ## Limitations
 
-Results depend on the selected constraints, libraries, and tool
-configuration. Pre-layout timing and estimated power do not represent
-final silicon performance or complete ASIC signoff.
+Results depend on the selected constraints, libraries, and tool configuration. Pre-layout timing and estimated power do not represent final silicon performance or complete ASIC signoff.
 
 ## Future Work
 
