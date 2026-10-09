@@ -1,0 +1,26 @@
+================================
+       ALU PPA REPORT
+================================
+
+Functional Verification
+Tests Passed : 8
+Tests Failed : 0
+Status       : PASS
+
+Lint
+Warnings     : 0
+Errors       : 0
+Status       : PASS
+
+Synthesis (Sky130 HD, tt 25C 1.8V)
+Cell Count   : 527
+Area         : 3080.45 um^2
+
+Timing (pre-layout, ideal clock)
+Critical Path: 10.11 ns
+Slack        : 1.89 ns (MET)
+
+Power (estimate, default activity)
+Estimated    : 0.102 mW
+
+================================

@@ -1,0 +1,12 @@
+BASELINE vs OPTIMIZED ALU
+==================================
+Cell count: 527 -> 464 (11.95% reduction)
+Area: 3080.45 -> 2840.22 um^2 (7.80% reduction)
+Critical path: 10.11 -> 7.06 ns (30.17% reduction)
+Slack: 1.89 -> 4.94 ns
+Estimated power: 0.102 -> 0.100 mW (1.96% reduction)
+Functional tests: 8 -> 8 passed
+Failed tests: 0 -> 0
+
+Note: Power is an estimate using the configured default activity.
+Timing is pre-layout and depends on the applied constraints.

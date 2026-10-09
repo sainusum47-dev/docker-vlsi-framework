@@ -1,0 +1,77 @@
+OpenSTA 3.1.0 d1e43c6f9f Copyright (c) 2026, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+% read_liberty /data/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Warning 1171: /data/lib/sky130_fd_sc_hd__tt_025C_1v80.lib line 23, default_fanout_load is 0.0.
+1
+% read_verilog /data/reports/synthesis/alu_netlist.v
+1
+% link_design alu
+1
+% read_sdc /data/constraints/alu.sdc
+% report_checks -path_delay max -format full
+Startpoint: A[0] (input port clocked by vclk)
+Endpoint: ALU_Out[30] (output port clocked by vclk)
+Path Group: vclk
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock vclk (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 v input external delay
+   0.00    0.00 v A[0] (in)
+   0.09    0.09 ^ _0508_/Y (sky130_fd_sc_hd__nand2_1)
+   0.14    0.23 v _0543_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.40    0.63 v _0558_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    1.02 v _0573_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    1.42 v _0587_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    1.81 v _0603_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    2.20 v _0615_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    2.59 v _0631_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    2.98 v _0646_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    3.37 v _0658_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    3.76 v _0675_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    4.15 v _0689_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    4.54 v _0707_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    4.93 v _0720_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    5.32 v _0737_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    5.71 v _0751_/X (sky130_fd_sc_hd__maj3_1)
+   0.20    5.91 ^ _0772_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.14    6.05 v _0786_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.40    6.45 v _0803_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    6.84 v _0818_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    7.23 v _0836_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    7.61 v _0852_/X (sky130_fd_sc_hd__maj3_1)
+   0.20    7.82 ^ _0873_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.14    7.96 v _0888_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.21    8.17 ^ _0909_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.14    8.31 v _0924_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.40    8.70 v _0941_/X (sky130_fd_sc_hd__maj3_1)
+   0.39    9.09 v _0958_/X (sky130_fd_sc_hd__maj3_1)
+   0.20    9.30 ^ _0978_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.14    9.44 v _0995_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.16    9.59 ^ _0996_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.04    9.64 v _0997_/Y (sky130_fd_sc_hd__a21oi_1)
+   0.47   10.11 v _1005_/X (sky130_fd_sc_hd__or4_1)
+   0.00   10.11 v ALU_Out[30] (out)
+          10.11   data arrival time
+
+  12.00   12.00   clock vclk (rise edge)
+   0.00   12.00   clock network delay (ideal)
+   0.00   12.00   clock reconvergence pessimism
+   0.00   12.00   output external delay
+          12.00   data required time
+---------------------------------------------------------
+          12.00   data required time
+         -10.11   data arrival time
+---------------------------------------------------------
+           1.89   slack (MET)
+
+
+% report_worst_slack -max
+worst slack max 1.89
+% exit

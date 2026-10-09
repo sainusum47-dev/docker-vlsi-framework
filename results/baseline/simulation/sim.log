@@ -1,0 +1,24 @@
+VCD info: dumpfile ../waveforms/alu.vcd opened for output.
+ADD:         10 +          5 =         15
+TEST 1: ADD PASS
+SUB:         10 -          5 =          5
+TEST 2: SUB PASS
+AND: 0000000a & 00000005 = 00000000
+TEST 3: AND PASS
+OR: 0000000a | 00000005 = 0000000f
+TEST 4: OR PASS
+XOR: 0000000a ^ 00000005 = 0000000f
+TEST 5: XOR PASS
+NOT: ~0000000a = fffffff5
+TEST 6: NOT PASS
+LEFT SHIFT: 0000000a << 1 = 00000014
+TEST 7: LEFT SHIFT PASS
+RIGHT SHIFT: 0000000a >> 1 = 00000005
+TEST 8: RIGHT SHIFT PASS
+--------------------------------
+TOTAL TESTS : 8
+PASSED      : 8
+FAILED      : 0
+ALU TEST COMPLETED
+--------------------------------
+/workspace/tb/alu_tb.v:106: $finish called at 80000 (1ps)

@@ -1,0 +1,52 @@
+
+5. Printing statistics.
+
+=== alu ===
+
+   Number of wires:                499
+   Number of wire bits:            594
+   Number of public wires:           5
+   Number of public wire bits:     100
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                527
+     sky130_fd_sc_hd__a2111oi_0      7
+     sky130_fd_sc_hd__a211o_1        1
+     sky130_fd_sc_hd__a21o_1         2
+     sky130_fd_sc_hd__a21oi_1       61
+     sky130_fd_sc_hd__a221oi_1       9
+     sky130_fd_sc_hd__a22o_1         1
+     sky130_fd_sc_hd__a22oi_1        3
+     sky130_fd_sc_hd__a311oi_1       1
+     sky130_fd_sc_hd__a31oi_1        9
+     sky130_fd_sc_hd__a32o_1         6
+     sky130_fd_sc_hd__a32oi_1       10
+     sky130_fd_sc_hd__and2_0         9
+     sky130_fd_sc_hd__and3_1         3
+     sky130_fd_sc_hd__and3b_1        1
+     sky130_fd_sc_hd__clkinv_1      15
+     sky130_fd_sc_hd__maj3_1        23
+     sky130_fd_sc_hd__nand2_1       61
+     sky130_fd_sc_hd__nand2b_1       4
+     sky130_fd_sc_hd__nand3_1       16
+     sky130_fd_sc_hd__nand3b_1       2
+     sky130_fd_sc_hd__nor2_1        76
+     sky130_fd_sc_hd__nor2b_1       20
+     sky130_fd_sc_hd__nor3_1         8
+     sky130_fd_sc_hd__nor3b_1        2
+     sky130_fd_sc_hd__o211ai_1      13
+     sky130_fd_sc_hd__o21ai_0       69
+     sky130_fd_sc_hd__o21bai_1       1
+     sky130_fd_sc_hd__o221ai_1       2
+     sky130_fd_sc_hd__o22ai_1       25
+     sky130_fd_sc_hd__o311ai_0       1
+     sky130_fd_sc_hd__or2_0          3
+     sky130_fd_sc_hd__or3_1          8
+     sky130_fd_sc_hd__or3b_1         2
+     sky130_fd_sc_hd__or4_1          1
+     sky130_fd_sc_hd__xnor2_1       29
+     sky130_fd_sc_hd__xor2_1        23
+
+   Chip area for module '\alu': 3080.454400
+

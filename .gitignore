@@ -1,0 +1,16 @@
+# Simulation and temporary files
+alu_sim
+a.out
+*.o
+*.pyc
+__pycache__/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local backups
+/backups/
+/tb/alu_tb_backup.v
+
+# Sky130 library: obtain separately; check redistribution terms
+/lib/*.lib
